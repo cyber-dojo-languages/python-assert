@@ -1,5 +1,4 @@
 
-
 [![CircleCI](https://circleci.com/gh/cyber-dojo-languages/python-assert.svg?style=svg)](https://circleci.com/gh/cyber-dojo-languages/python-assert)
 
 # display_name="Python, assert"
