@@ -1,14 +1,18 @@
-coverage3 run *test*.py
+set -e
 
 REPORT_DIR=${CYBER_DOJO_SANDBOX}/report
+rm -rf ${REPORT_DIR} || true
 mkdir -p ${REPORT_DIR}
+
+coverage3 run \
+  --source=${CYBER_DOJO_SANDBOX} \
+    *test*.py
 
 # https://coverage.readthedocs.io/en/v4.5.x/index.html
 
-coverage3 \
-  report \
-    --show-missing \
-      > ${REPORT_DIR}/coverage.txt
+coverage3 report \
+  --show-missing \
+    > ${REPORT_DIR}/coverage.txt
 
 # http://pycodestyle.pycqa.org/en/latest/intro.html#configuration
 
