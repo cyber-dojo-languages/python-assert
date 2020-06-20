@@ -1,10 +1,10 @@
-import hiker
+from hiker import global_answer, Hiker
 
+def test_global_method():
+    assert global_answer() == 42
 
-def test_life_the_universe_and_everything():
-    '''a simple example to start you off'''
-    douglas = hiker.Hiker()
-    assert douglas.answer() == 42
+def test_instance_method():
+    assert Hiker().instance_answer() == 42
 
 
 def green_traffic_light_pattern():
@@ -12,5 +12,6 @@ def green_traffic_light_pattern():
 
 
 if __name__ == '__main__':
-    test_life_the_universe_and_everything()
+    test_global_method()
+    test_instance_method()
     print(green_traffic_light_pattern())
